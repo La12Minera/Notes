@@ -12,7 +12,7 @@ app.use(express.json())  // controlador express.json que tome y convierte los da
 // Morgan, permite crear token:
 // morgan.token('myTokenBody', (req) => {
     // return JSON.stringify(req.body)
-})
+// })
 
 // 1- morgan. token = recibe el nombre que vamos a crear ('myTokenBody')
 // 2- 'myTokenBody' =  Se ve reflejado en la "app.use". Cuando llamen a mi 'myTokenBody' vayan y busquen los token personalizados que se hicieron y ejecutenlo.
@@ -26,11 +26,11 @@ app.use(express.json())  // controlador express.json que tome y convierte los da
         // POST /api/notes 201 - {"id":10,"content":"HTML is easy","date":"209","important":true} - 9.618 ms
 // 8- // No se utiliza tanto en producción por temas de leyes 
 
-app.use(
-    morgan(
-        ':method :url :status :res[content-lenght] :myTokenBody - :response-time ms'
-    )
-)
+//app.use(
+    // morgan(
+       // ':method :url :status :res[content-lenght] :myTokenBody - :response-time ms'
+    // )
+// )
 //morgan con configuración: muestra el metodo, url, status, contenido en caracteres tiene la respuesta, tiempo de demora en ms.
 // Ej: GET en POSTMAN (http://localhost:3001/api/notes/1) - Params - SEND
 //  En cmder al guardar corre: GET /api/notes/1 404 - - 3.068 ms 
