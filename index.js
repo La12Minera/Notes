@@ -1,12 +1,12 @@
 
 const { request, response } = require('express')
 const express = require('express')
-const morgan = require('morgan') // Morgan es un logger que recibe unos tipos de estilos para mostrar los look de inform.
+// const morgan = require('morgan') // Morgan es un logger que recibe unos tipos de estilos para mostrar los look de inform.
 //                Dichos look serian: Ej. POST/api/notes 201 2.595 ms - 95
 const app = express()
 app.use(express.json())  // controlador express.json que tome y convierte los datos json de una solicitud
                          // en objetos JS y luego los adjunta en la propiedad body del objeto req
-app.use(morgan('dev')) // Se usa en toda la aplicación. El 'dev' devuelve lo correcto en verde, mal en rojo, etc. (Es el mas utilizado "modo desarrollo")
+// app.use(morgan('dev')) // Se usa en toda la aplicación. El 'dev' devuelve lo correcto en verde, mal en rojo, etc. (Es el mas utilizado "modo desarrollo")
 //                           Cuando se usan token de morgan no se utiliza con dev, sino de la siguiente forma:
 
 // Morgan, permite crear token:
